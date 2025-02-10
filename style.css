@@ -184,8 +184,9 @@ nav {
 @media(max-width:426px){
   .tag{
     text-align: center;
-    font-size: 26px;
-
+}
+.tag h3{
+  font-size: 35px;
 }
 }
 /* tag end */
@@ -200,16 +201,21 @@ nav {
   gap: 20px;
 }
 .about2 .details{
-width: 400px;
-/* padding: 10px; */
+width: 600px;
 line-height: 1.8;
-font-size: 18px;
+font-size: 22px;
 }
 @media(max-width:426px){
   .about2 .details p{
     padding: 0 25px;
     line-height: 1.4;
     font-size: 18px;
+    }
+    .about2 .single{
+      width:100% !important;
+    }
+    .about2 .double{
+      display: none !important;
     }
 }
 
@@ -220,7 +226,9 @@ font-size: 18px;
   overflow: hidden;
   width: 320px;
 }
-.about2 .single picture{}
+.about2 .single picture{
+  display: block;
+}
 .about2 .single picture img{
   object-fit: cover;
   height: 100%;
@@ -235,6 +243,8 @@ font-size: 18px;
 }
 
 .about2 .double picture{
+  display: block;
+
   border-radius: 10px;
   width: 300px;
   overflow: hidden;
@@ -350,7 +360,7 @@ height: 250px;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
   }
   
   .accordion-body p {
@@ -363,7 +373,7 @@ height: 250px;
   /* FAQ Section Styles */
 .faq-section {
     background-color: #ff000000; /* Dark background */
-    color: #00ff08 !important; /* Text color */
+    /* color: #00ff08 !important;  */
     padding: 40px 20px;
     font-family: Arial, sans-serif;
   }
@@ -372,14 +382,19 @@ height: 250px;
   .accordion-header .accordion-button {
     background: rgba(0, 0, 0, 0.774);
     color: var(--ye);
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     border: none;
     padding: 10px 15px;
     text-align: left;
     transition: all 0.3s;
     box-shadow: none !important;
-
+    padding: 30px 20px ;
+  }
+  @media(max-width:426px){
+    .accordion-header .accordion-button {
+      font-size: 1.2rem;
+    }
   }
   
   .accordion-header .accordion-button:hover {
@@ -408,7 +423,8 @@ height: 250px;
     gap: 15px;
     padding: 20px;
     border: none;
-    background-color: var(--ye); /* Slightly lighter dark background */
+    /* background-color: var(--ye);  */
+    background-color:  rgba(0, 0, 0, 0.774); 
   }
   
   /* FAQ Image */
@@ -433,7 +449,7 @@ height: 250px;
     width: 380px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(69, 68, 1, 0.297);
+    /* box-shadow: 0 4px 8px rgba(69, 68, 1, 0.297); */
   }
   
   /* Text Content */
@@ -441,6 +457,7 @@ height: 250px;
     flex: 1;
     font-size: 20px;
     line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
   }
   @media(max-width:426px){
     .faq-content p {
@@ -454,17 +471,19 @@ height: 250px;
 /* choose start */
 .choose{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
 }
 .adv{
-    width: 320px;
+    /* width: 320px; */
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     padding: 20px;
     border: 1px solid var(--ye);
     border-radius: 18px;
@@ -482,6 +501,7 @@ height: 250px;
 /* choose end */
 /* rent start */
 .rent{
+  margin: 50px auto;
     height:480px ;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url('./images/rent.png'); /* Replace with your image URL */
@@ -509,11 +529,19 @@ height: 250px;
     align-items: center;
     gap: 10px;
 }
+@media(max-width:426px){
+  .cars .car{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+}
 div.sep{
     width: 100%;
     height: 1px;
     background-color:rgba(255, 214, 90, 0.2);
-    margin: 0 auto;
+    margin: 20px auto;
 }
 .cars .car picture{
     width: 300px;
@@ -522,6 +550,9 @@ div.sep{
 .cars .car picture img{
     width: 100%;
     object-fit: cover;
+}
+.trans{
+  transform: rotateY(180deg);
 }
 .car .details{
 
@@ -538,14 +569,20 @@ div.sep{
   outline: none;
   padding: 12px 30px ;
   font-weight: bold;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: transparent;
-  border: 2px solid rgba(255, 214, 90, 0.2);
-  color: var(--wh);
+  /* border: 2px solid rgba(255, 214, 90, 0.2); */
+  border: 1px solid var(--ye);
+  color: var(--ye);
+}
+@media(max-width:426px){
+  .car button{
+    width: 70%;
+  }
 }
 .car button:hover{
   background-color: rgba(255, 214, 90, 0.2);
-  /* color: var(--wh); */
+  color: var(--wh);
 }
 /* cars end */
 

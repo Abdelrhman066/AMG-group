@@ -489,7 +489,7 @@ height: 180px;
   
   .accordion-header .accordion-button:not(.collapsed) {
     background-color: rgba(0, 0, 0, 0.826) !important;
-    color: #ffcc00; /* Active question color */
+    color: var(--ye); /* Active question color */
     box-shadow: none !important;
   }
   
@@ -674,6 +674,12 @@ div.sep{
   /* border: 2px solid rgba(255, 214, 90, 0.2); */
   border: 1px solid var(--ye);
   color: var(--ye);
+}
+.car button a{
+  color: var(--ye);
+}
+.car button a:hover{
+  color: var(--wh);
 }
 @media(max-width:426px){
   .car button{

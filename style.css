@@ -239,7 +239,7 @@ nav {
   @media(max-width:426px){
     .hero picture h2{
       width: 100%;
-    top: 30%;
+    top: 36%;
     left: 50%;
     transform: translate(-50%,-150%);
       font-size: 22px;

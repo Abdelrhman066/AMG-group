@@ -11,6 +11,18 @@
     background-color: rgba(0, 0, 0, 0.913) !important;
     /* color: white; */
   }
+  section#english{
+    direction: ltr;
+  }
+  section#arabic{
+    direction: rtl;
+  }
+  #english, #arabic {
+    display: none;
+  }
+  section#english.active,section#arabic.active {
+    display: block;
+  }
   p,h2,h3,h4,h5,h6{
     color: var(--gy);
   }
@@ -157,6 +169,12 @@ nav {
   
   
   }
+  Logo
+  Home
+  About
+  Features
+  Services
+  Collection
   
   nav .icons a:hover i{
     color :black;
@@ -221,7 +239,7 @@ nav {
     }
   }
   .hero .filter{
-    filter: brightness(0.4);
+    filter: brightness(0.35);
   }
   .hero picture h2{
     color: white;
@@ -291,6 +309,7 @@ max-width: 600px;
 line-height: 1.8;
 font-size: 22px;
 }
+
 @media(max-width:426px){
   .about2 .details p{
     padding: 0 25px;
@@ -317,7 +336,7 @@ font-size: 22px;
 }
 .about2 .single picture img{
   object-fit: cover;
-  height: 100%;
+  width: 100%;
 }
 
 .about2 .double{
@@ -655,7 +674,7 @@ div.sep{
   transform: rotateY(180deg);
 }
 .car .details{
-
+  text-align: center;
 }
 .car .details h4{
   color: var(--wh);
